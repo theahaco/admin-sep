@@ -12,10 +12,10 @@ pub trait Administratable {
     }
 }
 
-pub const STORAGE_KEY: Symbol = symbol_short!("ADMIN");
+pub const STORAGE_KEY: &Symbol = &symbol_short!("ADMIN");
 
 pub fn get(env: &Env) -> Option<Address> {
-    env.storage().instance().get(&STORAGE_KEY)
+    env.storage().instance().get(STORAGE_KEY)
 }
 
 pub struct Admin;
@@ -29,6 +29,6 @@ impl Administratable for Admin {
         if let Some(owner) = get(env) {
             owner.require_auth();
         }
-        env.storage().instance().set(&STORAGE_KEY, &new_admin);
+        env.storage().instance().set(STORAGE_KEY, &new_admin);
     }
 }

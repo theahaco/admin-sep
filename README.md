@@ -54,15 +54,13 @@ Note that it is required to call `set_admin` in the `__constructor`.
 
 ## Other Considerations
 
-OpenZeppelin provide an alternative `Ownable` trait. It uses `owner` instead of `admin` and provides the addiontional option of accepting or rejecting being the new admin. However, this same functionality could be acheived by the new admin setting the original admin.
-Furthermore, given the prior art of the SAC's admin interface it makes sense to continue with this naming convention and given the foundational nature of the admin interface it should aim to be as minial as possible.
+OpenZeppelin provides an alternative: the `Ownable` trait. It uses `owner` instead of `admin` and provides the addiontional option of accepting or rejecting being the new owner. However, this same functionality could be acheived by the new admin setting the original admin.
+Furthermore, given the prior art of the SAC's admin interface it makes sense to continue with this naming convention and the foundational nature of the admin interface means it should aim to be as minimal as possible.
 
 ## Implementations
 
-Given the foundational aspect of this proposal, included is an implementation which uses with the proposed  `contracttrait` macro to make it easy to add the trait to your contract.
+The provided [admin-sep](https://github.com/ahalabs/admin-sep) implementation which uses with the proposed  `contracttrait` macro to make it easy to add the trait and its functionality to your contract with little boilerplate.
 
-
-- [admin-sep](https://github.com/ahalabs/admin-sep)
 
 ```rust
 use soroban_sdk::{Address, Env, contract, contractimpl, contracttrait};
@@ -98,4 +96,4 @@ pub trait Upgradable: Administratable {
 
 ## Future Considerations
 
-A simple macro could then be used to indicate where or not the method requires elevated permissions; it could also put a comment indicating the access control allowing downstream tooling to filter just normal user methods.
+A simple macro could then be used to indicate where or not the method requires elevated permissions; it could also put into the comments indicating the access control allowing downstream tooling to filter normal user methods.
