@@ -1,17 +1,17 @@
 [package]
-name = "admin-sep"
+name = "example-admin-contract-v2"
 version = "0.0.0"
 edition = "2024"
 publish = false
 rust-version = "1.87.0"
 
 [lib]
-crate-type = ["rlib"]
+crate-type = ["cdylib"]
 doctest = false
 
 [dependencies]
 soroban-sdk = { workspace = true }
+admin-sep = { path = "../admin_sep" }
 
 [dev-dependencies]
 soroban-sdk = { workspace = true, features = ["testutils"] }
-

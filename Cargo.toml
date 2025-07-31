@@ -1,0 +1,22 @@
+[workspace]
+resolver = "2"
+members = ["admin_sep", "admin", "admin_v2"]
+
+[workspace.dependencies]
+soroban-sdk = { git = "https://github.com/ahalabs/rs-soroban-sdk", rev = "4bdd847e386c8d8256ce7afef2b684899d3f189c" }
+
+[profile.contracts]
+inherits = "release"
+opt-level = "z"
+overflow-checks = true
+debug = 0
+strip = "symbols"
+debug-assertions = true
+panic = "abort"
+codegen-units = 1
+lto = true
+
+
+[profile.release-with-logs]
+inherits = "release"
+debug-assertions = true
