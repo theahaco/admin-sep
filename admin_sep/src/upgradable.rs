@@ -1,9 +1,10 @@
+use crate::Administratable;
 use soroban_sdk::contracttrait;
 
-use crate::administratable::Administratable;
-
-#[contracttrait(no_impl = true)]
+#[contracttrait]
 pub trait Upgradable: Administratable {
+    /// Upgrades the contract to a new hash.
+    /// Admin Only.
     fn upgrade(env: &soroban_sdk::Env, wasm_hash: soroban_sdk::BytesN<32>) {
         Self::require_admin(env);
         env.deployer().update_current_contract_wasm(wasm_hash);

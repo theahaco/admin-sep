@@ -9,8 +9,5 @@ fn test() {
     let admin = Address::generate(&env);
     let contract_id = env.register(Contract, (admin.clone(),));
     let _client = ContractClient::new(&env, &contract_id);
-
-    // assert_eq!(client.increment(), 2);
-    // assert_eq!(client.increment(), 3);
-    // assert_eq!(client.increment(), 4);
+    assert_eq!(_client.admin(), admin);
 }

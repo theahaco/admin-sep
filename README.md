@@ -76,10 +76,10 @@ impl Contract {
     }
 }
 
-#[contracttrait]
+#[contractimpl]
 impl Administratable for Contract {}
 
-#[contracttrait]
+#[contractimpl]
 impl Upgradable for Contract {}
 ```
 

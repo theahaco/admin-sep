@@ -6,9 +6,8 @@ test: build
 	cargo test
 
 build:
-	stellar contract build --out-dir target/stellar
-	stellar contract optimize --wasm target/stellar/soroban_admin_contract.wasm --wasm-out target/stellar/soroban_admin_contract.wasm
-	@ls -l target/stellar/*.wasm
+	stellar contract build --out-dir ../target/stellar
+	stellar contract optimize --wasm ../target/stellar/example_admin_contract_v2.wasm --wasm-out ../target/stellar/example_admin_contract_v2.wasm
 
 fmt:
 	cargo fmt --all
