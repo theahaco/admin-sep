@@ -1,7 +1,8 @@
 #![no_std]
 
-use admin_sep::{Administratable, Upgradable};
 use soroban_sdk::{Address, Env, contract, contractimpl};
+
+use admin_sep::{Administratable, Upgradable};
 
 #[contract]
 pub struct Contract;
@@ -10,6 +11,10 @@ pub struct Contract;
 impl Contract {
     pub fn __constructor(env: &Env, admin: &Address) {
         Self::set_admin(env, admin);
+    }
+
+    pub fn new_method(env: &Env) {
+        Self::require_admin(env);
     }
 }
 

@@ -1,5 +1,5 @@
 [package]
-name = "example-admin-contract"
+name = "example-admin-contract-v2"
 version = "0.0.0"
 edition = "2024"
 publish = false
@@ -11,6 +11,7 @@ doctest = false
 
 [dependencies]
 soroban-sdk = { workspace = true }
+stellar-strkey = "0.0.13"
 admin-sep = { path = "../admin_sep" }
 
 [dev-dependencies]

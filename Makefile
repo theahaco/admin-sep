@@ -9,6 +9,7 @@ build:
 	@for dir in $(SUBDIRS) ; do \
 		$(MAKE) -C $$dir build || exit 1; \
 	done
+	@ls -l target/stellar/*.wasm
 
 test: build
 	@for dir in $(SUBDIRS) ; do \
