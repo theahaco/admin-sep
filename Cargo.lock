@@ -1264,7 +1264,7 @@ dependencies = [
 [[package]]
 name = "soroban-ledger-snapshot"
 version = "23.0.2"
-source = "git+https://github.com/ahalabs/rs-soroban-sdk?rev=367e4efc2462c841b046aeac0dda8fcee05b790f#367e4efc2462c841b046aeac0dda8fcee05b790f"
+source = "git+https://github.com/theahaco/rs-soroban-sdk?rev=367e4efc2462c841b046aeac0dda8fcee05b790f#367e4efc2462c841b046aeac0dda8fcee05b790f"
 dependencies = [
  "serde",
  "serde_json",
@@ -1277,7 +1277,7 @@ dependencies = [
 [[package]]
 name = "soroban-sdk"
 version = "23.0.2"
-source = "git+https://github.com/ahalabs/rs-soroban-sdk?rev=367e4efc2462c841b046aeac0dda8fcee05b790f#367e4efc2462c841b046aeac0dda8fcee05b790f"
+source = "git+https://github.com/theahaco/rs-soroban-sdk?rev=367e4efc2462c841b046aeac0dda8fcee05b790f#367e4efc2462c841b046aeac0dda8fcee05b790f"
 dependencies = [
  "arbitrary",
  "bytes-lit",
@@ -1299,7 +1299,7 @@ dependencies = [
 [[package]]
 name = "soroban-sdk-macros"
 version = "23.0.2"
-source = "git+https://github.com/ahalabs/rs-soroban-sdk?rev=367e4efc2462c841b046aeac0dda8fcee05b790f#367e4efc2462c841b046aeac0dda8fcee05b790f"
+source = "git+https://github.com/theahaco/rs-soroban-sdk?rev=367e4efc2462c841b046aeac0dda8fcee05b790f#367e4efc2462c841b046aeac0dda8fcee05b790f"
 dependencies = [
  "darling",
  "heck",
@@ -1318,7 +1318,7 @@ dependencies = [
 [[package]]
 name = "soroban-spec"
 version = "23.0.2"
-source = "git+https://github.com/ahalabs/rs-soroban-sdk?rev=367e4efc2462c841b046aeac0dda8fcee05b790f#367e4efc2462c841b046aeac0dda8fcee05b790f"
+source = "git+https://github.com/theahaco/rs-soroban-sdk?rev=367e4efc2462c841b046aeac0dda8fcee05b790f#367e4efc2462c841b046aeac0dda8fcee05b790f"
 dependencies = [
  "base64",
  "stellar-xdr",
@@ -1329,7 +1329,7 @@ dependencies = [
 [[package]]
 name = "soroban-spec-rust"
 version = "23.0.2"
-source = "git+https://github.com/ahalabs/rs-soroban-sdk?rev=367e4efc2462c841b046aeac0dda8fcee05b790f#367e4efc2462c841b046aeac0dda8fcee05b790f"
+source = "git+https://github.com/theahaco/rs-soroban-sdk?rev=367e4efc2462c841b046aeac0dda8fcee05b790f#367e4efc2462c841b046aeac0dda8fcee05b790f"
 dependencies = [
  "prettyplease",
  "proc-macro2",
