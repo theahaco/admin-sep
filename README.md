@@ -87,9 +87,9 @@ Here `Upgradable` is defined as
 
 ```rust
 pub trait Upgradable: Administratable {
-    fn upgrade(env: &Env, wasm_hash: BytesN<32>) {
+    fn upgrade(env: &Env, new_wasm_hash: BytesN<32>) {
         Self::admin(env).require_auth();
-        env.deployer().update_current_contract_wasm(wasm_hash);
+        env.deployer().update_current_contract_wasm(new_wasm_hash);
     }
 }
 ```
