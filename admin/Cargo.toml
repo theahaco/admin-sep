@@ -15,3 +15,6 @@ admin-sep = { path = "../admin_sep" }
 
 [dev-dependencies]
 soroban-sdk = { workspace = true, features = ["testutils"] }
+
+[package.metadata.stellar]
+cargo_inherit = true
