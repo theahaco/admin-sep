@@ -3,7 +3,7 @@ resolver = "2"
 members = ["admin_sep", "admin", "admin_v2"]
 
 [workspace.dependencies]
-soroban-sdk = { git = "https://github.com/ahalabs/rs-soroban-sdk", rev = "5a99659f1483c926ff87ea45f8823b8c00dc4cbd" }
+soroban-sdk = { git = "https://github.com/ahalabs/rs-soroban-sdk", rev = "367e4efc2462c841b046aeac0dda8fcee05b790f" }
 
 [profile.contracts]
 inherits = "release"
