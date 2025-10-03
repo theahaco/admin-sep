@@ -2,14 +2,14 @@
 
 use soroban_sdk::{Address, Env, contract, contractimpl};
 
-use admin_sep::{Administratable, Upgradable};
+use admin_sep::{Administratable, Upgradable, AdministratableExtension};
 
 #[contract]
 pub struct Contract;
 
 #[contractimpl]
 impl Contract {
-    pub fn __constructor(env: &Env, admin: &Address) {
+    pub fn __constructor(env: &Env, admin: Address) {
         Self::set_admin(env, admin);
     }
 

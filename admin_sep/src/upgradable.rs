@@ -6,7 +6,7 @@ pub trait Upgradable: Administratable {
     /// Upgrades the contract to a new hash.
     /// Admin Only.
     fn upgrade(env: &soroban_sdk::Env, new_wasm_hash: soroban_sdk::BytesN<32>) {
-        Self::require_admin(env);
+        Self::admin(env).require_auth();
         env.deployer().update_current_contract_wasm(new_wasm_hash);
     }
 }
