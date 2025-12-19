@@ -1,6 +1,6 @@
 #![no_std]
 
-use admin_sep::{Administratable, Upgradable};
+use admin_sep::*;
 use soroban_sdk::{Address, Env, contract, contractimpl};
 
 #[contract]
@@ -13,10 +13,10 @@ impl Contract {
     }
 }
 
-#[contractimpl]
+#[contractimpl(contracttrait)]
 impl Administratable for Contract {}
 
-#[contractimpl]
+#[contractimpl(contracttrait)]
 impl Upgradable for Contract {}
 
 mod test;

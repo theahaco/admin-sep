@@ -1,4 +1,4 @@
-use crate::{Administratable, AdministratableExtension};
+use crate::AdministratableExtension;
 use soroban_sdk::contracttrait;
 
 #[contracttrait]
