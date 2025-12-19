@@ -15,7 +15,7 @@ pub trait Administratable {
     }
 }
 
-pub trait AdministratableExtension {
+pub trait AdministratableExtension: Administratable {
     fn require_admin(env: &Env);
 }
 
