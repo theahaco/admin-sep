@@ -1,15 +1,14 @@
 #![no_std]
 
+use admin_sep::*;
 use soroban_sdk::{Address, Env, contract, contractimpl};
-
-use admin_sep::{Administratable, Upgradable};
 
 #[contract]
 pub struct Contract;
 
 #[contractimpl]
 impl Contract {
-    pub fn __constructor(env: &Env, admin: &Address) {
+    pub fn __constructor(env: &Env, admin: Address) {
         Self::set_admin(env, admin);
     }
 
@@ -18,10 +17,10 @@ impl Contract {
     }
 }
 
-#[contractimpl]
+#[contractimpl(contracttrait)]
 impl Administratable for Contract {}
 
-#[contractimpl]
+#[contractimpl(contracttrait)]
 impl Upgradable for Contract {}
 
 mod test;
